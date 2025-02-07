@@ -1,0 +1,11 @@
+kalender.feuerwehr-effeltrich.de {
+	handle_path /*.ics {
+		reverse_proxy calunite:8080
+	}
+
+	# TODO: general web page
+	handle {
+		root * /srv
+		file_server
+	}
+}
